@@ -99,7 +99,7 @@ def convert_ids_to_tokens(inv_vocab, ids):
 
 
 def whitespace_tokenize(text):
-  """Runs basic whitespace cleaning and splitting on a peice of text."""
+  """Runs basic whitespace cleaning and splitting on a piece of text."""
   text = text.strip()
   if not text:
     return []
@@ -249,7 +249,7 @@ class BasicTokenizer(object):
 class WordpieceTokenizer(object):
   """Runs WordPiece tokenziation."""
 
-  def __init__(self, vocab, unk_token="[UNK]", max_input_chars_per_word=100):
+  def __init__(self, vocab, unk_token="[UNK]", max_input_chars_per_word=200):
     self.vocab = vocab
     self.unk_token = unk_token
     self.max_input_chars_per_word = max_input_chars_per_word
